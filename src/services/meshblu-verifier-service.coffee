@@ -1,4 +1,4 @@
-class MeshbluVerifService
+class MeshbluVerifierService
   doHello: ({hasError}, callback) =>
     return callback @_createError(755, 'Not enough dancing!') if hasError?
     callback()
@@ -8,4 +8,4 @@ class MeshbluVerifService
     error.code = code if code?
     return error
 
-module.exports = MeshbluVerifService
+module.exports = MeshbluVerifierService

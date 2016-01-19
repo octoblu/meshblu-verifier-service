@@ -1,11 +1,11 @@
-MeshbluVerifController = require './controllers/meshblu-verif-controller'
+MeshbluVerifierController = require './controllers/meshblu-verifier-controller'
 
 class Router
-  constructor: ({@meshbluVerifService}) ->
+  constructor: ({@meshbluVerifierService}) ->
   route: (app) =>
-    meshbluVerifController = new MeshbluVerifController {@meshbluVerifService}
+    meshbluVerifierController = new MeshbluVerifierController {@meshbluVerifierService}
 
-    app.get '/hello', meshbluVerifController.hello
+    app.get '/hello', meshbluVerifierController.hello
     # e.g. app.put '/resource/:id', someController.update
 
 module.exports = Router

@@ -8,7 +8,7 @@ meshbluAuth        = require 'express-meshblu-auth'
 MeshbluConfig      = require 'meshblu-config'
 debug              = require('debug')('meshblu-verifier-service:server')
 Router             = require './router'
-MeshbluVerifService = require './services/meshblu-verif-service'
+MeshbluVerifierService = require './services/meshblu-verifier-service'
 
 class Server
   constructor: ({@disableLogging, @port}, {@meshbluConfig})->
@@ -29,8 +29,8 @@ class Server
 
     app.options '*', cors()
 
-    meshbluVerifService = new MeshbluVerifService
-    router = new Router {@meshbluConfig, meshbluVerifService}
+    meshbluVerifierService = new MeshbluVerifierService
+    router = new Router {@meshbluConfig, meshbluVerifierService}
 
     router.route app
 
