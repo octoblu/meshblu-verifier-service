@@ -2,8 +2,7 @@
   "name": "meshblu-verifier-service",
   "version": "1.0.0",
   "description": "Put some description here",
-  "keywords": [
-  ],
+  "keywords": [],
   "homepage": "https://github.com/octoblu/meshblu-verif",
   "bugs": "https://github.com/octoblu/meshblu-verif/issues",
   "author": {
@@ -17,15 +16,17 @@
   },
   "scripts": {
     "start": "node command.js",
-    "test": "mocha"
+    "test": "istanbul cover _mocha -- -R spec --require coffee-coverage/register-istanbul"
   },
   "devDependencies": {
+    "@octoblu/shmock": "^0.7.2",
     "chai": "^3.4.1",
-    "istanbul": "^0.4.0",
+    "coffee-coverage": "^1.0.0",
+    "coffee-script": "^1.10.0",
+    "istanbul": "^0.4.2",
     "mocha": "^2.3.4",
     "mocha-istanbul": "^0.2.0",
     "request": "^2.66.0",
-    "@octoblu/shmock": "^0.7.2",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0"
   },
@@ -36,14 +37,18 @@
     "debug": "^2.2.0",
     "errorhandler": "^1.4.2",
     "express": "^4.13.3",
-    "express-meshblu-healthcheck": "^1.0.1",
     "express-meshblu-auth": "^2.0.0",
+    "express-meshblu-healthcheck": "^1.0.1",
     "lodash": "^3.10.1",
     "meshblu-config": "^3.1.1",
+    "meshblu-verifier-coap": "^1.0.3",
+    "meshblu-verifier-http": "^1.0.1",
+    "meshblu-verifier-mqtt": "^1.0.2",
+    "meshblu-verifier-socket.io": "^1.0.4",
+    "meshblu-verifier-websocket": "^1.0.1",
     "morgan": "^1.6.1"
   },
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "engines": {
     "node": ">=0.8.0",
     "npm": ">=1.2.10"

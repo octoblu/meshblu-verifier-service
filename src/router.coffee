@@ -5,7 +5,10 @@ class Router
   route: (app) =>
     meshbluVerifierController = new MeshbluVerifierController {@meshbluVerifierService}
 
-    app.get '/hello', meshbluVerifierController.hello
-    # e.g. app.put '/resource/:id', someController.update
+    app.get '/verifiers/coap', meshbluVerifierController.verifyCoap
+    app.get '/verifiers/http', meshbluVerifierController.verifyHttp
+    app.get '/verifiers/mqtt', meshbluVerifierController.verifyMqtt
+    app.get '/verifiers/socket.io', meshbluVerifierController.verifySocketIO
+    app.get '/verifiers/websocket', meshbluVerifierController.verifyWebsocket
 
 module.exports = Router

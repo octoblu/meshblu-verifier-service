@@ -1,10 +1,34 @@
 class MeshbluVerifierController
   constructor: ({@meshbluVerifierService}) ->
 
-  hello: (request, response) =>
-    {hasError} = request.query
-    @meshbluVerifierService.doHello {hasError}, (error) =>
+  verifyCoap: (request, response) =>
+    meshbluConfig = request.meshbluAuth
+    @meshbluVerifierService.verifyCoap {meshbluConfig}, (error) =>
       return response.status(error.code || 500).send(error: error.message) if error?
-      response.sendStatus(200)
+      response.sendStatus(204)
+
+  verifyHttp: (request, response) =>
+    meshbluConfig = request.meshbluAuth
+    @meshbluVerifierService.verifyHttp {meshbluConfig}, (error) =>
+      return response.status(error.code || 500).send(error: error.message) if error?
+      response.sendStatus(204)
+
+  verifyMqtt: (request, response) =>
+    meshbluConfig = request.meshbluAuth
+    @meshbluVerifierService.verifyMqtt {meshbluConfig}, (error) =>
+      return response.status(error.code || 500).send(error: error.message) if error?
+      response.sendStatus(204)
+
+  verifySocketIO: (request, response) =>
+    meshbluConfig = request.meshbluAuth
+    @meshbluVerifierService.verifySocketIO {meshbluConfig}, (error) =>
+      return response.status(error.code || 500).send(error: error.message) if error?
+      response.sendStatus(204)
+
+  verifyWebsocket: (request, response) =>
+    meshbluConfig = request.meshbluAuth
+    @meshbluVerifierService.verifyWebsocket {meshbluConfig}, (error) =>
+      return response.status(error.code || 500).send(error: error.message) if error?
+      response.sendStatus(204)
 
 module.exports = MeshbluVerifierController
