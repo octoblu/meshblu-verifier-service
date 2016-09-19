@@ -1,10 +1,13 @@
 # meshblu-verifier-service
 
+[![Build Status](https://travis-ci.org/octoblu/meshblu-verifier-service.svg?branch=master)](https://travis-ci.org/octoblu/meshblu-verifier-service)
+[![Test Coverage](https://codecov.io/gh/octoblu/meshblu-verifier-service/branch/master/graph/badge.svg)](https://codecov.io/gh/octoblu/meshblu-verifier-service)
 [![Dependency status](http://img.shields.io/david/octoblu/meshblu-verifier-service.svg?style=flat)](https://david-dm.org/octoblu/meshblu-verifier-service)
 [![devDependency Status](http://img.shields.io/david/dev/octoblu/meshblu-verifier-service.svg?style=flat)](https://david-dm.org/octoblu/meshblu-verifier-service#info=devDependencies)
-[![Build Status](http://img.shields.io/travis/octoblu/meshblu-verifier-service.svg?style=flat&branch=master)](https://travis-ci.org/octoblu/meshblu-verifier-service)
+[![Slack Status](http://community-slack.octoblu.com/badge.svg)](http://community-slack.octoblu.com)
 
 [![NPM](https://nodei.co/npm/meshblu-verifier-service.svg?style=flat)](https://npmjs.org/package/meshblu-verifier-service)
+
 
 ## Installing
 
